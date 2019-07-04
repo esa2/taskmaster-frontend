@@ -1,0 +1,40 @@
+header {
+  background: #666;
+  color: #fff;
+  line-height: 2em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+main {
+  margin: 1.5em;
+
+  ul {
+      list-style-type: none;
+
+      li {
+          background: #eee;
+          line-height: 1.5em;
+          margin: .5em;
+          padding: .5em;
+
+          div {
+            display: flex;
+            flex-direction: row;
+
+            span {
+              width: 300px;
+            }
+          }
+          }
+      }
+}
+
+td {
+  padding: 0 200px 0 10px;
+}
+
+footer {
+  background: #666;
+  line-height: 5em;
+}
