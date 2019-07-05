@@ -6,6 +6,29 @@ header {
   text-align: center;
 }
 
+.header-span {
+  margin: 0 140px 0 60px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  background-color: #e47911;
+  padding: 1em;
+  border: none;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #8bb02e;
+}
+
 main {
   margin: 1.5em;
 
@@ -31,10 +54,12 @@ main {
 }
 
 td {
-  padding: 0 200px 0 10px;
+  padding: 0 210px 0 10px;
 }
 
 footer {
   background: #666;
+  color: #fff;
   line-height: 5em;
+  text-align: center;
 }

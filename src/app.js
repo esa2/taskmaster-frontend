@@ -1,50 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import './app.scss';
-import mockData from './mock.json';
-
-console.log(mockData)
-
-function Tasks() {
-  const [tasks, setTasks] = useState([])
-
-  const getTasks = () => {
-    setTasks(mockData)
-  }
-
-  useEffect(getTasks, [])
-return (
-  
-  <ul>
-    <th>
-      <td>Title</td>
-      <td>Description</td>
-      <td>Assignee</td>
-      <td>Status</td>
-    </th>
-      {tasks.map((task) => 
-   <li key={task.id}>
-     <div>
-       <span>{task.title}</span>
-       <span>{task.description}</span>
-       <span>{task.assignee}</span>
-       <span>{task.status}</span>
-      </div>
-    </li>
-   )}
-  </ul>
-)
-}
+import Header from './components/header'
+import Tasks from './components/tasks'
+import Footer from './components/footer'
 
 function App() {
   return (
+
    <>
-   <header>Task Master</header>
+   <Header></Header>
    <main>
      <Tasks></Tasks>
    </main>
-   <footer></footer>
+    <Footer></Footer>
    </>
-  );
+   
+  )
 }
 
 export default App;
