@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import '../app.scss'
-//import mockData from './mock.json';
+// import mockData from '../mock.json';
 
 const API = 'http://taskmaster-dev-esa.us-west-2.elasticbeanstalk.com/tasks'
-// const API = 'http://localhost/tasks'
 
 function Tasks() {
   const [tasks, setTasks] = useState([])
@@ -20,10 +19,16 @@ function Tasks() {
   return (
 
     <div>
+      <ul>
+        <li>
+      <section className="section-spans">
         <span className="header-span">Title</span>
         <span className="header-span">Description</span>
         <span className="header-span">Assignee</span>
         <span className="header-span">Status</span>
+      </section>
+      </li>
+      </ul>
     <ul>
         {tasks.map((task) => 
     <li key={task.id}>

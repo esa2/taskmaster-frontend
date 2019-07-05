@@ -6,8 +6,13 @@ header {
   text-align: center;
 }
 
+.section-spans {
+  display: flex;
+  flex-direction: row;
+}
+
 .header-span {
-  margin: 0 140px 0 60px;
+  width: 300px;
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -51,10 +56,6 @@ main {
           }
           }
       }
-}
-
-td {
-  padding: 0 210px 0 10px;
 }
 
 footer {
