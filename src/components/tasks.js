@@ -4,6 +4,7 @@ import Upload from './upload'
 // import mockData from '../mock.json';
 
 const API = 'http://taskmaster-dev-esa.us-west-2.elasticbeanstalk.com/tasks'
+// const API = 'http://localhost:5000/tasks'
 
 function Tasks() {
   const [tasks, setTasks] = useState([])
@@ -27,7 +28,8 @@ function Tasks() {
         <span className="header-span">Description</span>
         <span className="header-span">Assignee</span>
         <span className="header-span">Status</span>
-         <span className="header-span">Upload image</span>
+        <span className="header-span">Upload image</span>
+        <span className="header-span">View image</span>
       </section>
       </li>
       </ul>
@@ -40,6 +42,13 @@ function Tasks() {
         <span>{task.assignee}</span>
         <span>{task.status}</span>
         <Upload id={task.id}></Upload>
+        {task.taskfile === null ? <span>no image</span> : (
+          <span>
+          <a href={task.taskfile}>
+                <img src={task.taskfile} alt="" height="45" width="45"></img>
+                </a>
+                </span>
+              )}
         </div>
       </li>
     )}
