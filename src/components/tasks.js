@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import '../app.scss'
+import Upload from './upload'
 // import mockData from '../mock.json';
 
 const API = 'http://taskmaster-dev-esa.us-west-2.elasticbeanstalk.com/tasks'
@@ -26,6 +27,7 @@ function Tasks() {
         <span className="header-span">Description</span>
         <span className="header-span">Assignee</span>
         <span className="header-span">Status</span>
+         <span className="header-span">Upload image</span>
       </section>
       </li>
       </ul>
@@ -37,6 +39,7 @@ function Tasks() {
         <span>{task.description}</span>
         <span>{task.assignee}</span>
         <span>{task.status}</span>
+        <Upload id={task.id}></Upload>
         </div>
       </li>
     )}
