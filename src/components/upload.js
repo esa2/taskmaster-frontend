@@ -3,8 +3,8 @@ import '../app.scss'
 
 const Upload = (props) => {
 
-    const API = `http://localhost:5000/tasks/${props.id}/images`;
-    // const API = `http://taskmaster-dev-esa.us-west-2.elasticbeanstalk.com/tasks/${props.id}/images`;
+    // const API = `http://localhost:5000/tasks/${props.id}/images`;
+    const API = `http://taskmaster-dev-esa.us-west-2.elasticbeanstalk.com/tasks/${props.id}/images`;
     console.log(API)
 
       return (
