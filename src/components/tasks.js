@@ -30,6 +30,7 @@ function Tasks() {
         <span className="header-span">Status</span>
         <span className="header-span">Upload image</span>
         <span className="header-span">View image</span>
+        <span className="header-span">Thumbnail</span>
       </section>
       </li>
       </ul>
@@ -42,13 +43,21 @@ function Tasks() {
         <span>{task.assignee}</span>
         <span>{task.status}</span>
         <Upload id={task.id}></Upload>
+
         {task.taskfile === null ? <span>no image</span> : (
           <span>
-          <a href={task.taskfile}>
+            <a href={task.taskfile}>
                 <img src={task.taskfile} alt="" height="45" width="45"></img>
-                </a>
-                </span>
+            </a>
+          </span>
               )}
+
+              {task.uploadName === null ? <span>no thumbnail</span> : (
+          <span>
+            <a href={task.uploadName}>view</a>
+          </span>
+              )}
+
         </div>
       </li>
     )}
